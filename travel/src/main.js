@@ -8,6 +8,8 @@ import fastclick from 'fastclick'
 import './assets/styles/reset.css' 
 import './assets/styles/border.css' 
 // 解决1像素边框问题，各个移动端的物理像素不同
+import './assets/styles/iconfont.css'
+
 Vue.config.productionTip = false
 fastclick.attach(document.body)
 /* eslint-disable no-new */
