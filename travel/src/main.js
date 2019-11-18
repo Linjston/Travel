@@ -10,6 +10,10 @@ import './assets/styles/border.css'
 // 解决1像素边框问题，各个移动端的物理像素不同
 import './assets/styles/iconfont.css'
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
+
 Vue.config.productionTip = false
 fastclick.attach(document.body)
 /* eslint-disable no-new */
