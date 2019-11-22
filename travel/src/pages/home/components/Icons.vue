@@ -1,6 +1,6 @@
 <template>
     <div class="icons">  
-        <swiper>  
+        <swiper :options="swiperOption">  
             <swiper-slide   v-for="page of pages"
                             :key="page.id"
             >   
@@ -32,33 +32,36 @@ export default {
                 content:'机票'
             },{
                 id: '0003',
-                url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                content:'酒店'
+                url: '//s.qunarzz.com/homenode/images/touchheader/package.png',
+                content:'度假'
             },{
                 id: '0004',
-                url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                content:'酒店'
+                url: 'http://s.qunarzz.com/homenode/images/touchheader/train.png',
+                content:'火车票'
             },{
                 id: '0005',
-                url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                content:'酒店'
+                url: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
+                content:'景点门票'
             },{
                 id: '0006',
-                url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                content:'酒店'
+                url: '//picbed.qunarzz.com/7804b43ac02cd0333bd0f866eebd43b3.png',
+                content:'一日游'
             },{
                 id: '0007',
-                url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                content:'酒店'
+                url: '//s.qunarzz.com/homenode/images/touchheader/aroundtravel.png',
+                content:'周边短途'
             },{
                 id: '0008',
-                url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                content:'酒店'
+                url: '//s.qunarzz.com/homenode/images/touchheader/tuan.png',
+                content:'旅游团购'
             },{
                 id: '0009',
-                url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                content:'酒店'
-            }]
+                url: '//s.qunarzz.com/homenode/images/touchheader/travel.png',
+                content:'攻略'
+            }],
+            swiperOption:{
+                loop:true
+            }
         }
     }, 
     computed: {
@@ -88,34 +91,35 @@ export default {
     .icons >>> .swiper-container
         height 0
         padding-bottom 50%
-    .icon
-            position relative
-            overflow hidden
-            float left
-            height 0
-            width 25%
-            padding-bottom 25%
-            .icon-img
-                position absolute 
-                top 0
-                left 0
-                right 0
-                bottom .44rem
-                box-sizing border-box 
-                padding .1rem
-                .icon-img-content
-                    display block
-                    margin 0 auto
-                    height 100%
-            .icon-desc
-                position absolute
-                left 0
-                right 0
-                bottom 0
-                height .44rem
-                line-height .44rem
-                color $darkTextColor
-                text-align center  
-                ellipsis() 
+    .icons
+        .icon
+                position relative
+                overflow hidden
+                float left
+                height 0
+                width 25%
+                padding-bottom 25%
+                .icon-img
+                    position absolute 
+                    top 0
+                    left 0
+                    right 0
+                    bottom .44rem
+                    box-sizing border-box 
+                    padding .1rem
+                    .icon-img-content
+                        display block
+                        margin 0 auto
+                        height 100%
+                .icon-desc
+                    position absolute
+                    left 0
+                    right 0
+                    bottom 0
+                    height .44rem
+                    line-height .44rem
+                    color $darkTextColor
+                    text-align center  
+                    ellipsis() 
 
 </style>
