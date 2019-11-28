@@ -5,7 +5,7 @@
         <li  class="item" v-for="item of recommendList" 
                          :key="item.id"
         >
-            <img class="item-img" :src="item.url" >
+            <img class="item-img" :src="item.imgUrl" >
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
                 <p class="item-desc">{{item.desc}}</p>
@@ -19,24 +19,10 @@
 <script>
 export default {
     name: 'recommend',
+    props:['recommendList'],
     data (){
         return {
-            recommendList:[{
-                id: "0001",
-                url: "http://img1.qunarzz.com/p/tts2/1905/13/88cc5d719793be02.jpg_280x200_9f763d25.jpg",
-                title: "船游港珠澳大桥1日纯玩游",
-                desc: "出发地：广州"
-            },{
-                id: "0002",
-                url: "http://img1.qunarzz.com/p/tts3/1811/cb/906065befeb09102.jpg_280x200_d31c214a.jpg",
-                title: "广州增城白水寨纯玩一日游【吸氧观瀑-拍照圣地-金秋特惠】",
-                desc: "出发地：广州"
-            },{
-                id: "0001",
-                url: "http://img1.qunarzz.com/p/tts2/1905/13/88cc5d719793be02.jpg_280x200_9f763d25.jpg",
-                title: "船游港珠澳大桥1日纯玩游",
-                desc: "出发地：广州"
-            }]
+            
         }
     }
 }
@@ -57,7 +43,7 @@ export default {
         display:flex
         border-bottom 1px solid #eee
         .item-img
-            width:119px
+            width: 1.7rem
             height :1.7rem
             padding:.1rem           
         .item-info
